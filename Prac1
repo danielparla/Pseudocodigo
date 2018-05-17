@@ -1,0 +1,28 @@
+//Crea un programa que pida un número al usuario un número de mes,
+//diga cuántos días tiene (por ejemplo, 30). Debes usar una matriz
+Proceso Prac9_1
+	//definimos los campos
+	Definir num,meses Como Entero;
+	//definimos el tamaño de la Array
+	Dimension meses[12];
+	
+	//damos valores a cada 'hueco' de la Array
+	meses[0] <- 31;
+	meses[1] <- 28;
+	meses[2] <- 31;
+	meses[3] <- 30;
+	meses[4] <- 31;
+	meses[5] <- 30;
+	meses[6] <- 31;
+	meses[7] <- 31;
+	meses[8] <- 30;
+	meses[9] <- 31;
+	meses[10] <- 30;
+	meses[11] <- 31;
+	
+	Escribir '¿Qué mes desea consultar? (Ejemplo: Mayo = 5)';
+	Leer num;
+	
+	Escribir 'El mes ',num,' tiene ',meses[(num-1)],' días.';
+	//(num-1) es por que la array va un numero por debajo del orden normal
+FinProceso
