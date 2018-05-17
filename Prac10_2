@@ -1,0 +1,26 @@
+//Crea una función CantidadDeDivisores, que reciba un número entero y devuelva 
+//la cantidad de divisores (por ejemplo, para el número 16, sus divisores 
+//son 1, 2, 4, 8, 16, por lo que la respuesta debería ser 5).
+
+//primero creamo el subproceso que calcule la cantidad de divisores
+//lo acumula en la variable num_divisores
+SubProceso num_divisores <- divisores(num)
+		Definir i, num_divisores como entero;
+		num_divisores <- 0;
+		//el siguiente 'para' añade 1 al contador cuando encuentra un divisor para 'num'
+		para i <- 1 hasta num Hacer
+			si num%i=0 entonces
+				num_divisores <- num_divisores+1;
+			FinSi
+		FinPara
+FinSubProceso
+
+Proceso Prac10_2
+		Definir number,num_divisores Como Entero;
+		
+		Escribir 'Digame un número y le diré cuantos divisores tiene';
+		Leer number;
+		num_divisores <- divisores(number);
+		
+		escribir number, ' tiene ', num_divisores,' divisores';
+FinProceso
