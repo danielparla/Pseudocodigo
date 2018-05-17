@@ -9,9 +9,9 @@ SubProceso centrar(n_columnas,text)
 		Definir espacio,i como real;
 		definir arreglo como caracter;
 		
-		espacio <- ((n_columnas-longitud(text))/2);
+		espacio <- (((n_columnas-longitud(text))/2)-1);
 		//n_columnas es el tamaño del documento
-		//le restamos la longitud del texto y dividimos por 2
+		//le restamos la longitud del texto y dividimos por 2 (resto 1 porque estamos escribiendo los espacios)
 		//ahora 'espacio' es el numero de espacios antees del texto.
 		
 		//concateno (espacio, texto) y por cada repeticion habrá un espacio más
