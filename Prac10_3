@@ -1,0 +1,29 @@
+//3: Crea un procedimiento EscribirEspaciado, que reciba como parámetro un texto
+// y lo escriba con un espacio adicional tras cada letra. Por ejemplo, "Hola, tú" 
+//se escribiría "H o l a , t ú ".
+
+//creamos el subproceso que incluya espacios
+subproceso espaciar(text)
+		definir i Como Entero;
+		Definir char,caden como caracter;
+		caden <- '';
+		
+		//este para creara una subcadena(char) que concatena LETRA+espacio
+		//y otra subcadena(caden) que recogerá y sumará lo que haga 'char'
+		para i <- 0 hasta longitud(text) hacer
+			char <- concatenar(subcadena(text,i,i),' ');
+			caden <- concatenar(caden,char);
+		FinPara
+		Escribir caden;
+FinSubProceso
+
+
+Proceso Prac10_3
+		Definir text_intro Como Caracter;
+		
+		Escribir 'Introduzca la palabra que quiere espaciar';
+		Leer text_intro;
+		
+		Escribir 'El resultado es:';
+		espaciar(text_intro);
+FinProceso
