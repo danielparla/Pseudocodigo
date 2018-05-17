@@ -1,0 +1,25 @@
+//2: Haz un programa que pida al usuario 5 datos, 
+//los guarde en una matriz y luego muestre su media 
+//(la suma de los 5 datos, dividida entre 5).
+
+Proceso Prac9_2
+
+//definimos la dimension de la array y las variables
+	Dimension num_arr[5];
+	Definir pos_arr,num_arr, num_intro,media Como Entero;
+  
+  //inicializamos la variable media sobre la que sumaremos cada entrada del usuario
+	media <- 0;
+  
+	Escribir 'Por favor escriba 5 numeros y yo hallaré la media';
+  
+  //creamos un para-hasta-hacer donde lea cada numero, lo sume a media 
+  //y lo guarde en una posicion de la Array
+	Para  pos_arr <- 0 hasta 4 Hacer
+		Leer num_intro;
+		media <- media + num_intro;
+		num_arr[pos_arr] <- num_intro;
+	FinPara
+  
+	Escribir 'La media es ',(media/5);
+FinProceso
