@@ -1,0 +1,15 @@
+//Crea una función Cubo, que reciba un número y lo devuelva elevado al cubo.
+SubProceso Cubo(num por referencia)
+		num <- num^3;
+FinSubProceso
+
+Proceso Prac10_5
+		Definir number Como entero;
+		Escribir 'Dime el numero para elevarlo al cubo';
+		Leer number;
+		
+		Escribir 'El cubo de ',number,' es:';
+		Cubo(number);
+		Escribir number;
+	
+FinProceso
