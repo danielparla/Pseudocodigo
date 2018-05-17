@@ -1,0 +1,29 @@
+//Crea un programa que pida al usuario dos bloques de 10 números cada uno 
+//(usando un array de dos dimensiones). Después deberá mostrar 
+//el mayor dato que se ha introducido en cada uno de esos dos bloques.
+Proceso Prac9_5
+	dimension tabla[2,10];
+	Definir tabla, bloque, hueco, num_leido, mayor Como Entero;
+	Escribir 'Escriba 20 numeros que separaré en 2 bloques';
+	
+//Hacemos 2 para-hacer para recorrer la Array Bidimensional y escribir en ella
+	Para bloque <- 0 hasta 1 Hacer
+		Para hueco <-0 hasta 9 Hacer
+			Escribir 'Bloque ',bloque,' fila ',hueco,':';
+			Leer num_leido;
+			tabla[bloque,hueco] <- num_leido;
+		FinPara
+	FinPara
+	
+//damos un valor inicial a mayor = al primer numero de la tabla
+	mayor <- tabla[0,0];
+	
+//Hacemos OTROS 2 para-hacer para leer los datos y elegir el mayor
+	Para bloque <- 0 hasta 1 Hacer
+		Para hueco <-0 hasta 9 Hacer
+			
+			si tabla[bloque,hueco] > mayor Entonces
+				mayor <- tabla[bloque,hueco];
+			FinSi
+		FinPara
+	FinPara
