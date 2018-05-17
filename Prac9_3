@@ -1,0 +1,34 @@
+//Crea una versión ampliada del ejercicio 2, 
+//en la que se pida al usuario 5 datos, 
+//se guarden en una matriz y finalmente se calcule su media, 
+//se muestre ésta y se muestren también los valores mayores que la media).
+Proceso Prac9_3
+	
+	//definimos la Array y las variables
+	Dimension arr_num[5];
+	Definir arr_num, pos_arr, num_intro, media Como Entero;
+	
+	media <- 0;
+	
+	Escribir 'Por favor escriba 5 numeros y yo hallaré la media';
+	//creamos un bucle que 'recorra la array' puesto por puesto 
+	Para  pos_arr <- 0 hasta 4 Hacer
+		Leer num_intro;
+		media <- media + num_intro;
+		arr_num[pos_arr] <- num_intro;
+	FinPara
+	
+	//hacemos la media
+	media <- (media/5);
+	
+	Escribir 'La media es ',media;
+	escribir 'Los números que superan la media son: ';
+	
+	//leemos uno a uno los huecos de la Array y le aplicamos un si-entonces
+	//para escribir solo los que superen la media.
+	Para pos_arr <- 0 hasta 4 hacer
+		si arr_num[pos_arr]> media Entonces
+			escribir arr_num[pos_arr];
+		FinSi
+	FinPara
+FinProceso
