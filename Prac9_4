@@ -1,0 +1,31 @@
+//Haz un programa que pida al usuario 7 números enteros y calcule (y muestre) 
+//cuál es el mayor de ellos. Nota: para calcular el mayor valor de una matriz, 
+//hay que comparar cada uno de los valores que tiene almacenados con el que 
+//hasta ese momento es el máximo provisional. El valor inicial de este máximo 
+//provisional no debería ser cero (porque el resultado sería incorrecto si todos 
+//los números son negativos), sino el primer elemento de la matriz.
+Proceso Prac9_4
+	
+	//declaramos las variables y la dimension dela array
+	Definir arr_num, pos,intro, mayor Como Entero;
+	Dimension arr_num[7];
+	
+	Escribir 'Introduzca 7 numeros y le diré el mayor de todos ellos.';
+	//creamos un para-hasta-hacer para 'recorrer la Array' e introducir los numeros del usuario
+	Para pos <- 0 hasta 6 Hacer
+		Leer intro;
+		arr_num[pos]<-intro;
+	FinPara
+	
+	//damos un valor inicial a 'mayor'
+	mayor <- arr_num[0];
+	
+	//comparamos uno a uno todos los valores de la Array para buscar el mayor
+	Para pos <- 1 hasta 6 Hacer
+		si arr_num[pos] > mayor Entonces
+			mayor <- arr_num[pos];
+		FinSi
+	FinPara
+	
+	Escribir 'El mayor de todos estos es el ',mayor;  
+FinProceso
