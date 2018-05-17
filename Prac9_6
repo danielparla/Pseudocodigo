@@ -1,0 +1,37 @@
+Proceso hayaDeterminante
+	
+//definimos variables y dimensiones de la Array bidimensional
+	Dimension matriz[3,3];
+	Definir fila, columna, determinante,d_posi,d_neg, matriz como entero;
+	
+	Escribir 'Escriba uno por uno, y de izquierda a derecha, los dígitos de la matriz de la cual desea averiguar su determinante';
+	
+//escribimos uno a uno los numeros de la matriz
+	Para fila <- 0 hasta 2 Hacer
+		Para columna <- 0 hasta 2 Hacer
+			Escribir 'Fila ',fila+1,' Columna ',columna+1,':';
+			//los usuarios no suelen saber que existe la posicion 0, por eso pongo columna+1
+			Leer matriz[fila,columna];
+		FinPara
+	FinPara
+	
+	//escribimos la matriz en formato 3 x 3
+	escribir 'Tu matriz es:';
+	Para fila <- 0 hasta 2 Hacer
+		Para columna <- 0 hasta 2 Hacer
+			Escribir Sin Saltar matriz[fila,columna],' ';
+		FinPara
+		Escribir '';
+	FinPara
+	//quedará algo así:
+	// -1 0 2
+	// 3 0 -1
+	// 1 -2 3
+	
+	//calculamos el determinante
+	d_posi <- (matriz[0,0] * matriz[1,1] * matriz[2,2]) + (matriz[0,1] * matriz[1,2] * matriz[2,0]) + (matriz[1,0] * matriz[2,1] * matriz[0,2]);
+	d_neg <- (matriz[0,2] * matriz[1,1] * matriz[2,0]) + (matriz[0,0] * matriz[1,2] * matriz[2,1]) + (matriz[2,2] * matriz[0,1] * matriz[1,0]);
+	determinante <- d_posi-d_neg;
+	
+	Escribir 'El determinante es:',determinante;
+FinProceso
