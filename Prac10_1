@@ -1,0 +1,36 @@
+//1: Crea un procedimiento EscribirCentrado, 
+//que reciba como parámetro un texto y lo escriba 
+//centrado en pantalla (suponiendo una anchura de 80 columnas; 
+//pista: deberás escribir 80 - longitud/2 espacios antes del texto).
+
+//Empezamos haciendo un subproceso que recoja el texto y le añada espacios delante
+//n_columnas es la cantidad de columans y text el texto
+SubProceso centrar(n_columnas,text)
+		Definir espacio,i como real;
+		definir arreglo como caracter;
+		
+		espacio <- ((n_columnas-longitud(text))/2);
+		//n_columnas es el tamaño del documento
+		//le restamos la longitud del texto y dividimos por 2
+		//ahora 'espacio' es el numero de espacios antees del texto.
+		
+		//concateno (espacio, texto) y por cada repeticion habrá un espacio más
+		para i <-1 hasta espacio hacer
+			text <- Concatenar(' ',text);
+		FinPara
+		
+		Escribir text;
+	
+FinSubProceso
+
+Proceso EscribirCentrado
+		
+		//definimos variables
+		Definir text1 Como Caracter;
+		
+		//damos a la variable el valor de lo que escriba el usuario
+		Leer text1;
+		
+		//escribimos el proceso introduciendo el texto leido y el tamaño
+		centrar(80,text1);
+FinProceso
